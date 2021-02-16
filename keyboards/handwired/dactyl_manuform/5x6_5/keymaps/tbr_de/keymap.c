@@ -147,35 +147,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 /*
-[_QWERTZ] = LAYOUT(
-    KC_ESC,     DE_Q,       DE_W,       DE_E,       DE_R,       DE_T,                                                                               DE_Z,       DE_U,       DE_I,       DE_O,       DE_P,       DE_UDIA,
-    KC_TAB,     SH_A,       CT_S,       AL_D,       GU_F,       DE_G,                                                                               DE_H,       GU_J,       AL_K,       CT_L,       SH_ODIA,    DE_ADIA,
-    KC_ALGR,    DE_Y,       DE_X,       DE_C,       DE_V,       DE_B,       _______,            KC_CCCV,             KC_LEAD,          _______,     DE_N,       DE_M,       DE_COMM,    DE_DOT,     DE_MINS,    DE_SS,
-                                        KC_MUTE,    KC_DEL,     KC_BSPC,    LT(_SYM,KC_BSPC),  LT(_NUM,KC_SPC),     LT(_NAV,KC_SPC),   KC_SPC,     LT(_KUMA,KC_SPC),     KC_ENT,  _______
-),
-
-[_KOY] = LAYOUT(
-    KC_ESC,     DE_K,       DE_DOT,     DE_O,       DE_COMM,    DE_Y,                                                              DE_V,       DE_G,       DE_C,       DE_L,       DE_SS,      DE_Z,
-    KC_TAB,     DE_H,       DE_A,       DE_E,       DE_I,       DE_U,                                                              DE_D,       DE_T,       DE_R,       DE_N,       DE_S,       DE_F,
-    KC_ALGR,    DE_X,       DE_Q,       DE_ADIA,    DE_UDIA,    DE_ODIA,    _______,           KC_CCCV,    KC_LEAD,    _______,     DE_B,       DE_P,       DE_W,       DE_M,       DE_J,       KC_NO,
-                                        KC_MUTE,    KC_DEL,     KC_BSPC,    LT(_SYM,KC_BSPC),  LT(_NUM,KC_SPC),     LT(_NAV,KC_SPC),   KC_SPC,     LT(_KUMA,KC_SPC),     KC_ENT,  _______
-),
-
-
-[_SYM] = LAYOUT(
-    _______,    DE_EXLM,    DE_DQOT,    DE_DLR,     DE_PERC,    DE_AMPR,                                                    DE_SLSH,    DE_ASTR,    DE_QUOT,    _______,    DE_TILD,    DE_DEG,
-    _______,    DE_LABK,    DE_RABK,    DE_LPRN,    DE_RPRN,    DE_EQL,                                                     DE_PIPE,    DE_AT,      DE_PLUS,    DE_MINS,    DE_HASH,    DE_CIRC,
-    _______,    DE_LCBR,    DE_RCBR,    DE_LBRC,    DE_RBRC,    _______,    _______,    _______,    _______,    _______,    DE_BSLS,    _______,    DE_SCLN,    DE_COLN,    DE_UNDS,    DE_QUES,
-                                        _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______
-),
-
-[_FNC] = LAYOUT(
-    _______,    TG(_KOY),   TO(_GAMING),_______,    _______,    KC_PSCR,                                                    _______,    KC_F7,      KC_F8,      KC_F9,      KC_F12,     _______,
-    _______,    _______,    _______,    _______,    _______,    _______,                                                    _______,    KC_F4,      KC_F5,      KC_F6,      KC_F11,     _______,
-    _______,    _______,    _______,    _______,    _______,    KC_INS,     _______,    _______,    _______,    _______,    _______,    KC_F1,      KC_F2,      KC_F3,      KC_F10,     _______,
-                                        _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______
-),
-
 [_KUMA] = LAYOUT(
     _______,    _______,    _______,    OBJEXPL,    _______,    TBLFILT,                                                    PROPERT,    _______,    INSLINE,    DELLINE,    _______,    _______,
     _______,    NOFILT,     SEARCH,     _______,    FLDFILT,    _______,                                                    ZOOM,       _______,    _______,    _______,    _______,    _______,

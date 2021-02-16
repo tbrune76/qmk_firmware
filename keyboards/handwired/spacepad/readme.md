@@ -4,7 +4,7 @@
 
 This Keypad has 2 rows x 7 columns of keys.
 
-Keyboard Maintainer: [Timo Brune](https://github.com/jmcameron)  
+Keyboard Maintainer: [Timo Brune](https://github.com/tbrune76)  
 
 Hardware:
   * Amoeba PCB

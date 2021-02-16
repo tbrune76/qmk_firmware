@@ -9,78 +9,6 @@ enum layers {
 
 
 
-/* Enum for the tap dancing keys */
-/*
-enum tap_codes {
-    A_Q, E_Q, E_U, E_E,
-    A_Y, I_I, O_C, U_U
-};
-
-
-void send_french_unicode_char(uint8_t count, char *once, char *twice)
-{
-    if (count <= 1)
-	send_unicode_hex_string(once);
-    else
-	send_unicode_hex_string(twice);
-}
-
-void dance_a_q(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_A_GRAVE, FR_L_QUOTE);
-}
-
-void dance_e_q(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_E_AIGU, FR_R_QUOTE);
-}
-
-void dance_e_u(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_E_GRAVE, FR_U_GRAVE);
-}
-
-void dance_e_e(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_E_HAT, FR_E_UMLAUT);
-}
-
-void dance_a_y(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_A_HAT, FR_Y_UMLAUT);
-}
-
-void dance_i_i(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_I_HAT, FR_I_UMLAUT);
-}
-
-void dance_o_c(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_O_HAT, FR_C_CIRCUM);
-}
-
-void dance_u_u(qk_tap_dance_state_t *state, void *user_data)
-{
-    send_french_unicode_char(state->count, FR_U_HAT, FR_U_UMLAUT);
-}
-*/
-/* Define the tap dance actions for the french characters */
-/*
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [A_Q] = ACTION_TAP_DANCE_FN(dance_a_q),
-    [E_Q] = ACTION_TAP_DANCE_FN(dance_e_q),
-    [E_U] = ACTION_TAP_DANCE_FN(dance_e_u),
-    [E_E] = ACTION_TAP_DANCE_FN(dance_e_e),
-
-    [A_Y] = ACTION_TAP_DANCE_FN(dance_a_y),
-    [I_I] = ACTION_TAP_DANCE_FN(dance_i_i),
-    [O_C] = ACTION_TAP_DANCE_FN(dance_o_c),
-    [U_U] = ACTION_TAP_DANCE_FN(dance_u_u)
-};
-
-*/
-
 #define VISI    KC_SPC
 #define TOP     KC_2
 #define FRONT   KC_1
@@ -89,6 +17,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define REAR    KC_4
 #define RIGHT   KC_3
 
+//Define FreeCAD Keys
 enum custom_keycodes {
     FC_G_ARC = SAFE_RANGE,
     FC_G_CIRC,
@@ -155,17 +84,10 @@ void oled_task_user(void) {
             oled_write_ln_P(PSTR("Undefined"), false);
     }
 
-    /*
-    // Host Keyboard LED Status
-    led_t led_state = host_keyboard_led_state();
-    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
-    */
 }
 #endif
 
-
+//Process FreeCAD key combos
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case FC_V_FULL:
